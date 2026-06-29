@@ -1,0 +1,23 @@
+{
+  "field_selection": [
+    "first_name",
+    "last_name",
+    "email",
+    "phone",
+    "location",
+    "skills",
+    "experience",
+    "education"
+  ],
+  "renaming": {
+    "first_name": "first_name",
+    "last_name": "last_name",
+    "location": "candidate_location"
+  },
+  "normalization": {
+    "email": "lowercase"
+  },
+  "missing_policy": "fill_null",
+  "confidence_toggle": true,
+  "provenance_toggle": true
+}

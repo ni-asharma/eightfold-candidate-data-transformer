@@ -1,0 +1,13 @@
+{
+  "C++": ["cpp", "c plus plus", "c++", "visual c++"],
+  "JavaScript": ["javascript", "js", "ecmascript"],
+  "Python": ["python", "py", "python3"],
+  "React": ["react", "reactjs", "react.js"],
+  "TypeScript": ["typescript", "ts"],
+  "Go": ["go", "golang"],
+  "Kubernetes": ["kubernetes", "k8s"],
+  "Docker": ["docker", "containerization"],
+  "SQL": ["sql", "mysql", "postgresql", "sqlite", "mssql"],
+  "HTML": ["html", "html5"],
+  "CSS": ["css", "css3", "sass", "scss"]
+}

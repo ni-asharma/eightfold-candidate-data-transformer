@@ -1,0 +1,15 @@
+{
+  "execution_time_seconds": 0.0652,
+  "sources_processed": [
+    "Recruiter CSV",
+    "ATS JSON",
+    "Resume PDF",
+    "Recruiter Notes TXT"
+  ],
+  "candidates_processed": 1,
+  "conflicts_resolved": 1,
+  "fields_normalized": 9,
+  "warnings": [],
+  "errors": [],
+  "overall_average_confidence": 0.9886
+}

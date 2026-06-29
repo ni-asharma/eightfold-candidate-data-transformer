@@ -1,0 +1,2 @@
+first_name,last_name,email,phone,city,country,skills,company_1,title_1,start_date_1,end_date_1,description_1,institution_1,degree_1,field_1,start_date_edu_1,end_date_edu_1,urls
+John,Doe,john.doe@example.com,+1 415 555 0100,San Francisco,US,"Python, C++, SQL",Google,Software Engineer,2022-01,2023-12,Developed scalable search microservices.,Stanford University,BS,Computer Science,2018-09,2022-06,https://linkedin.com/in/johndoe

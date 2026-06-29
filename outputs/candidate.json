@@ -1,0 +1,133 @@
+[
+  {
+    "first_name": {
+      "value": "John",
+      "confidence_score": 0.9975,
+      "provenance": {
+        "source": "Recruiter CSV",
+        "method": "csv_column",
+        "timestamp": "2026-06-29T17:18:40.897870Z",
+        "normalization_applied": [],
+        "confidence": 1.0
+      }
+    },
+    "last_name": {
+      "value": "Doe",
+      "confidence_score": 1.0,
+      "provenance": {
+        "source": "Recruiter CSV",
+        "method": "csv_column",
+        "timestamp": "2026-06-29T17:18:40.897870Z",
+        "normalization_applied": [],
+        "confidence": 1.0
+      }
+    },
+    "email": {
+      "value": "john.doe@example.com",
+      "confidence_score": 1.0,
+      "provenance": {
+        "source": "Recruiter CSV",
+        "method": "csv_column",
+        "timestamp": "2026-06-29T17:18:40.897870Z",
+        "normalization_applied": [],
+        "confidence": 1.0
+      }
+    },
+    "phone": {
+      "value": "+14155550100",
+      "confidence_score": 1.0,
+      "provenance": {
+        "source": "Recruiter CSV",
+        "method": "csv_column",
+        "timestamp": "2026-06-29T17:18:40.897870Z",
+        "normalization_applied": [],
+        "confidence": 1.0
+      }
+    },
+    "candidate_location": {
+      "value": {
+        "city": "San Francisco",
+        "country": "US"
+      },
+      "confidence_score": 1.0,
+      "provenance": {
+        "source": "Recruiter CSV",
+        "method": "csv_column",
+        "timestamp": "2026-06-29T17:18:40.897870Z",
+        "normalization_applied": [],
+        "confidence": 1.0
+      }
+    },
+    "skills": {
+      "value": [
+        "Python",
+        "C++",
+        "SQL",
+        "Docker",
+        "JavaScript",
+        "Kubernetes",
+        "Go"
+      ],
+      "confidence_score": 1.0,
+      "provenance": {
+        "source": "Recruiter CSV",
+        "method": "list_union",
+        "timestamp": "2026-06-29T17:18:40.934386Z",
+        "normalization_applied": [],
+        "confidence": 1.0
+      }
+    },
+    "experience": {
+      "value": [
+        {
+          "company": "Google",
+          "title": "Senior Software Engineer",
+          "start_date": "2024-01",
+          "end_date": "Present",
+          "description": "Tech lead for search indexing team."
+        },
+        {
+          "company": "Eightfold AI",
+          "title": "Senior Staff Engineer",
+          "start_date": "2026-01",
+          "end_date": "Present",
+          "description": "Leads ingestion data pipeline architectural designs."
+        },
+        {
+          "company": "Google",
+          "title": "Software Engineer",
+          "start_date": "2022-01",
+          "end_date": "2023-12",
+          "description": "Worked on distributed backend storage systems and improved database access latency."
+        }
+      ],
+      "confidence_score": 0.95,
+      "provenance": {
+        "source": "System",
+        "method": "list_merge",
+        "timestamp": "2026-06-29T17:18:40.934386Z",
+        "normalization_applied": [],
+        "confidence": 0.95
+      }
+    },
+    "education": {
+      "value": [
+        {
+          "institution": "Stanford University",
+          "degree": "BS",
+          "field_of_study": "Computer Science",
+          "start_date": "2018-09",
+          "end_date": "2022-06"
+        }
+      ],
+      "confidence_score": 0.95,
+      "provenance": {
+        "source": "System",
+        "method": "list_merge",
+        "timestamp": "2026-06-29T17:18:40.934386Z",
+        "normalization_applied": [],
+        "confidence": 0.95
+      }
+    }
+  }
+]

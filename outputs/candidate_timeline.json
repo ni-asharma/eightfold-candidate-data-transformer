@@ -1,0 +1,568 @@
+[
+  {
+    "pipeline_stage": "normalization",
+    "source": "Recruiter CSV",
+    "field": "phone",
+    "raw_value": "+1 415 555 0100",
+    "normalized_value": "+14155550100",
+    "validation_result": "Success",
+    "merge_decision": null,
+    "confidence": null,
+    "final_value": null,
+    "explanation": "Formatted phone '+1 415 555 0100' to E.164: '+14155550100'"
+  },
+  {
+    "pipeline_stage": "normalization",
+    "source": "ATS JSON",
+    "field": "location.country",
+    "raw_value": "United States",
+    "normalized_value": "US",
+    "validation_result": "Success",
+    "merge_decision": null,
+    "confidence": null,
+    "final_value": null,
+    "explanation": "Mapped country 'United States' to ISO-2: 'US'"
+  },
+  {
+    "pipeline_stage": "normalization",
+    "source": "ATS JSON",
+    "field": "skills",
+    "raw_value": [
+      "Python",
+      "c plus plus",
+      "Docker",
+      "SQL"
+    ],
+    "normalized_value": [
+      "Python",
+      "C++",
+      "Docker",
+      "SQL"
+    ],
+    "validation_result": "Success",
+    "merge_decision": null,
+    "confidence": null,
+    "final_value": null,
+    "explanation": "Standardized skill terms using synonym vocabulary dictionary."
+  },
+  {
+    "pipeline_stage": "normalization",
+    "source": "ATS JSON",
+    "field": "experience.company",
+    "raw_value": "Google Inc.",
+    "normalized_value": "Google",
+    "validation_result": "Success",
+    "merge_decision": null,
+    "confidence": null,
+    "final_value": null,
+    "explanation": "Cleaned corporate suffix for 'Google Inc.' -> 'Google'"
+  },
+  {
+    "pipeline_stage": "normalization",
+    "source": "Resume PDF",
+    "field": "phone",
+    "raw_value": "(415) 555-0100",
+    "normalized_value": "+14155550100",
+    "validation_result": "Success",
+    "merge_decision": null,
+    "confidence": null,
+    "final_value": null,
+    "explanation": "Formatted phone '(415) 555-0100' to E.164: '+14155550100'"
+  },
+  {
+    "pipeline_stage": "normalization",
+    "source": "Resume PDF",
+    "field": "location.country",
+    "raw_value": "CA",
+    "normalized_value": "US",
+    "validation_result": "Success",
+    "merge_decision": null,
+    "confidence": null,
+    "final_value": null,
+    "explanation": "Mapped country 'CA' to ISO-2: 'US'"
+  },
+  {
+    "pipeline_stage": "normalization",
+    "source": "Resume PDF",
+    "field": "skills",
+    "raw_value": [
+      "python",
+      "cpp",
+      "javascript",
+      "docker",
+      "kubernetes"
+    ],
+    "normalized_value": [
+      "Python",
+      "C++",
+      "JavaScript",
+      "Docker",
+      "Kubernetes"
+    ],
+    "validation_result": "Success",
+    "merge_decision": null,
+    "confidence": null,
+    "final_value": null,
+    "explanation": "Standardized skill terms using synonym vocabulary dictionary."
+  },
+  {
+    "pipeline_stage": "normalization",
+    "source": "Recruiter Notes TXT",
+    "field": "phone",
+    "raw_value": "+1 415-555-0100",
+    "normalized_value": "+14155550100",
+    "validation_result": "Success",
+    "merge_decision": null,
+    "confidence": null,
+    "final_value": null,
+    "explanation": "Formatted phone '+1 415-555-0100' to E.164: '+14155550100'"
+  },
+  {
+    "pipeline_stage": "normalization",
+    "source": "Recruiter Notes TXT",
+    "field": "location.country",
+    "raw_value": "USA",
+    "normalized_value": "US",
+    "validation_result": "Success",
+    "merge_decision": null,
+    "confidence": null,
+    "final_value": null,
+    "explanation": "Mapped country 'USA' to ISO-2: 'US'"
+  },
+  {
+    "pipeline_stage": "entity_resolution",
+    "source": "Recruiter CSV",
+    "field": "candidate_group",
+    "raw_value": "john.doe@example.com",
+    "normalized_value": "john.doe@example.com",
+    "validation_result": "Success",
+    "merge_decision": null,
+    "confidence": null,
+    "final_value": null,
+    "explanation": "Linked parsed profile from Recruiter CSV to matching candidate record."
+  },
+  {
+    "pipeline_stage": "entity_resolution",
+    "source": "ATS JSON",
+    "field": "candidate_group",
+    "raw_value": "john.doe@example.com",
+    "normalized_value": "john.doe@example.com",
+    "validation_result": "Success",
+    "merge_decision": null,
+    "confidence": null,
+    "final_value": null,
+    "explanation": "Linked parsed profile from ATS JSON to matching candidate record."
+  },
+  {
+    "pipeline_stage": "entity_resolution",
+    "source": "Resume PDF",
+    "field": "candidate_group",
+    "raw_value": "john.doe@example.com",
+    "normalized_value": "john.doe@example.com",
+    "validation_result": "Success",
+    "merge_decision": null,
+    "confidence": null,
+    "final_value": null,
+    "explanation": "Linked parsed profile from Resume PDF to matching candidate record."
+  },
+  {
+    "pipeline_stage": "entity_resolution",
+    "source": "Recruiter Notes TXT",
+    "field": "candidate_group",
+    "raw_value": "john.doe@example.com",
+    "normalized_value": "john.doe@example.com",
+    "validation_result": "Success",
+    "merge_decision": null,
+    "confidence": null,
+    "final_value": null,
+    "explanation": "Linked parsed profile from Recruiter Notes TXT to matching candidate record."
+  },
+  {
+    "pipeline_stage": "merging",
+    "source": "Recruiter CSV",
+    "field": "first_name",
+    "raw_value": {
+      "Recruiter CSV": "John",
+      "ATS JSON": "Jonathan",
+      "Resume PDF": "John",
+      "Recruiter Notes TXT": "Johnathan"
+    },
+    "normalized_value": {
+      "Recruiter CSV": "John",
+      "ATS JSON": "Jonathan",
+      "Resume PDF": "John",
+      "Recruiter Notes TXT": "Johnathan"
+    },
+    "validation_result": "Success",
+    "merge_decision": "higher_source_reliability",
+    "confidence": 0.9975,
+    "final_value": "John",
+    "explanation": "Value from 'Recruiter CSV' selected due to higher source weight (0.95) compared to 'ATS JSON' (0.9). Value agreed upon by 2 source(s): Recruiter CSV, Resume PDF."
+  },
+  {
+    "pipeline_stage": "merging",
+    "source": "Recruiter CSV",
+    "field": "last_name",
+    "raw_value": {
+      "Recruiter CSV": "Doe",
+      "ATS JSON": "Doe",
+      "Resume PDF": "Doe",
+      "Recruiter Notes TXT": "Doe"
+    },
+    "normalized_value": {
+      "Recruiter CSV": "Doe",
+      "ATS JSON": "Doe",
+      "Resume PDF": "Doe",
+      "Recruiter Notes TXT": "Doe"
+    },
+    "validation_result": "Success",
+    "merge_decision": "exact_match",
+    "confidence": 1.0,
+    "final_value": "Doe",
+    "explanation": "All sources (Recruiter CSV, ATS JSON, Resume PDF, Recruiter Notes TXT) agree on exact raw value."
+  },
+  {
+    "pipeline_stage": "merging",
+    "source": "Recruiter CSV",
+    "field": "email",
+    "raw_value": {
+      "Recruiter CSV": "john.doe@example.com",
+      "ATS JSON": "john.doe@example.com",
+      "Resume PDF": "john.doe@example.com",
+      "Recruiter Notes TXT": "john.doe@example.com"
+    },
+    "normalized_value": {
+      "Recruiter CSV": "john.doe@example.com",
+      "ATS JSON": "john.doe@example.com",
+      "Resume PDF": "john.doe@example.com",
+      "Recruiter Notes TXT": "john.doe@example.com"
+    },
+    "validation_result": "Success",
+    "merge_decision": "exact_match",
+    "confidence": 1.0,
+    "final_value": "john.doe@example.com",
+    "explanation": "All sources (Recruiter CSV, ATS JSON, Resume PDF, Recruiter Notes TXT) agree on exact raw value."
+  },
+  {
+    "pipeline_stage": "merging",
+    "source": "Recruiter CSV",
+    "field": "phone",
+    "raw_value": {
+      "Recruiter CSV": "+14155550100",
+      "ATS JSON": "+14155550100",
+      "Resume PDF": "+14155550100",
+      "Recruiter Notes TXT": "+14155550100"
+    },
+    "normalized_value": {
+      "Recruiter CSV": "+14155550100",
+      "ATS JSON": "+14155550100",
+      "Resume PDF": "+14155550100",
+      "Recruiter Notes TXT": "+14155550100"
+    },
+    "validation_result": "Success",
+    "merge_decision": "exact_match",
+    "confidence": 1.0,
+    "final_value": "+14155550100",
+    "explanation": "All sources (Recruiter CSV, ATS JSON, Resume PDF, Recruiter Notes TXT) agree on exact raw value."
+  },
+  {
+    "pipeline_stage": "merging",
+    "source": "Recruiter CSV",
+    "field": "location",
+    "raw_value": {
+      "ATS JSON": "San Francisco, US",
+      "Resume PDF": "San Francisco, US",
+      "Recruiter Notes TXT": "San Francisco, US",
+      "Recruiter CSV": "San Francisco, US"
+    },
+    "normalized_value": {
+      "ATS JSON": "San Francisco, US",
+      "Resume PDF": "San Francisco, US",
+      "Recruiter Notes TXT": "San Francisco, US",
+      "Recruiter CSV": "San Francisco, US"
+    },
+    "validation_result": "Success",
+    "merge_decision": "exact_match",
+    "confidence": 1.0,
+    "final_value": "city='San Francisco' country='US'",
+    "explanation": "City Winner: (All sources (Recruiter CSV, ATS JSON, Resume PDF, Recruiter Notes TXT) agree on exact raw value.). Country Winner: (All sources (Recruiter CSV, ATS JSON, Resume PDF, Recruiter Notes TXT) agree on exact raw value.)."
+  },
+  {
+    "pipeline_stage": "merging",
+    "source": "Recruiter CSV",
+    "field": "skills",
+    "raw_value": {
+      "Recruiter CSV": [
+        "Python",
+        "C++",
+        "SQL"
+      ],
+      "ATS JSON": [
+        "Python",
+        "C++",
+        "Docker",
+        "SQL"
+      ],
+      "Resume PDF": [
+        "Python",
+        "C++",
+        "JavaScript",
+        "Docker",
+        "Kubernetes"
+      ],
+      "Recruiter Notes TXT": [
+        "Python",
+        "C++",
+        "Go",
+        "Docker"
+      ]
+    },
+    "normalized_value": {
+      "Recruiter CSV": [
+        "Python",
+        "C++",
+        "SQL"
+      ],
+      "ATS JSON": [
+        "Python",
+        "C++",
+        "Docker",
+        "SQL"
+      ],
+      "Resume PDF": [
+        "Python",
+        "C++",
+        "JavaScript",
+        "Docker",
+        "Kubernetes"
+      ],
+      "Recruiter Notes TXT": [
+        "Python",
+        "C++",
+        "Go",
+        "Docker"
+      ]
+    },
+    "validation_result": "Success",
+    "merge_decision": "union_deduplicate",
+    "confidence": 1.0,
+    "final_value": "['Python', 'C++', 'SQL', 'Docker', 'JavaScript', 'Kubernetes', 'Go']",
+    "explanation": "Union of skills from sources: Recruiter CSV, ATS JSON, Resume PDF, Recruiter Notes TXT."
+  },
+  {
+    "pipeline_stage": "merging",
+    "source": "Recruiter CSV",
+    "field": "experience",
+    "raw_value": {
+      "Recruiter CSV": [
+        {
+          "company": "Google",
+          "title": "Software Engineer",
+          "start_date": "2022-01",
+          "end_date": "2023-12",
+          "description": "Developed scalable search microservices."
+        }
+      ],
+      "ATS JSON": [
+        {
+          "company": "Google",
+          "title": "Senior Software Engineer",
+          "start_date": "2024-01",
+          "end_date": "Present",
+          "description": "Tech lead for search indexing team."
+        },
+        {
+          "company": "Google",
+          "title": "Software Engineer",
+          "start_date": "2022-01",
+          "end_date": "2023-12",
+          "description": "Developed scalable search backend and optimized index latency."
+        }
+      ],
+      "Resume PDF": [
+        {
+          "company": "Google",
+          "title": "Software Engineer",
+          "start_date": "2022-01",
+          "end_date": "2023-12",
+          "description": "Worked on distributed backend storage systems and improved database access latency."
+        }
+      ],
+      "Recruiter Notes TXT": [
+        {
+          "company": "Eightfold AI",
+          "title": "Senior Staff Engineer",
+          "start_date": "2026-01",
+          "end_date": "Present",
+          "description": "Leads ingestion data pipeline architectural designs."
+        }
+      ]
+    },
+    "normalized_value": {
+      "Recruiter CSV": [
+        {
+          "company": "Google",
+          "title": "Software Engineer",
+          "start_date": "2022-01",
+          "end_date": "2023-12",
+          "description": "Developed scalable search microservices."
+        }
+      ],
+      "ATS JSON": [
+        {
+          "company": "Google",
+          "title": "Senior Software Engineer",
+          "start_date": "2024-01",
+          "end_date": "Present",
+          "description": "Tech lead for search indexing team."
+        },
+        {
+          "company": "Google",
+          "title": "Software Engineer",
+          "start_date": "2022-01",
+          "end_date": "2023-12",
+          "description": "Developed scalable search backend and optimized index latency."
+        }
+      ],
+      "Resume PDF": [
+        {
+          "company": "Google",
+          "title": "Software Engineer",
+          "start_date": "2022-01",
+          "end_date": "2023-12",
+          "description": "Worked on distributed backend storage systems and improved database access latency."
+        }
+      ],
+      "Recruiter Notes TXT": [
+        {
+          "company": "Eightfold AI",
+          "title": "Senior Staff Engineer",
+          "start_date": "2026-01",
+          "end_date": "Present",
+          "description": "Leads ingestion data pipeline architectural designs."
+        }
+      ]
+    },
+    "validation_result": "Success",
+    "merge_decision": "company_match_merge",
+    "confidence": 0.95,
+    "final_value": "[ExperienceItem(company='Google', title='Senior Software Engineer', start_date='2024-01', end_date='Present', description='Tech lead for search indexing team.'), ExperienceItem(company='Eightfold AI', title='Senior Staff Engineer', start_date='2026-01', end_date='Present', description='Leads ingestion data pipeline architectural designs.'), ExperienceItem(company='Google', title='Software Engineer', start_date='2022-01', end_date='2023-12', description='Worked on distributed backend storage systems and improved database access latency.')]",
+    "explanation": "Grouped and merged experience records based on identical company, title, and dates."
+  },
+  {
+    "pipeline_stage": "merging",
+    "source": "Recruiter CSV",
+    "field": "education",
+    "raw_value": {
+      "Recruiter CSV": [
+        {
+          "institution": "Stanford University",
+          "degree": "BS",
+          "field_of_study": "Computer Science",
+          "start_date": "2018-09",
+          "end_date": "2022-06"
+        }
+      ],
+      "ATS JSON": [
+        {
+          "institution": "Stanford University",
+          "degree": "Bachelor of Science",
+          "field_of_study": "CS",
+          "start_date": "2018-09",
+          "end_date": "2022-06"
+        }
+      ],
+      "Resume PDF": [
+        {
+          "institution": "Stanford University",
+          "degree": "Bachelor of Science",
+          "field_of_study": "Computer Science",
+          "start_date": "2018-09",
+          "end_date": "2022-06"
+        }
+      ]
+    },
+    "normalized_value": {
+      "Recruiter CSV": [
+        {
+          "institution": "Stanford University",
+          "degree": "BS",
+          "field_of_study": "Computer Science",
+          "start_date": "2018-09",
+          "end_date": "2022-06"
+        }
+      ],
+      "ATS JSON": [
+        {
+          "institution": "Stanford University",
+          "degree": "Bachelor of Science",
+          "field_of_study": "CS",
+          "start_date": "2018-09",
+          "end_date": "2022-06"
+        }
+      ],
+      "Resume PDF": [
+        {
+          "institution": "Stanford University",
+          "degree": "Bachelor of Science",
+          "field_of_study": "Computer Science",
+          "start_date": "2018-09",
+          "end_date": "2022-06"
+        }
+      ]
+    },
+    "validation_result": "Success",
+    "merge_decision": "institution_match_merge",
+    "confidence": 0.95,
+    "final_value": "[EducationItem(institution='Stanford University', degree='BS', field_of_study='Computer Science', start_date='2018-09', end_date='2022-06')]",
+    "explanation": "Grouped and merged education records based on institution names."
+  },
+  {
+    "pipeline_stage": "merging",
+    "source": "Recruiter CSV",
+    "field": "urls",
+    "raw_value": {
+      "Recruiter CSV": [
+        "https://linkedin.com/in/johndoe"
+      ],
+      "ATS JSON": [
+        "https://linkedin.com/in/johndoe",
+        "https://github.com/johndoe"
+      ],
+      "Resume PDF": [
+        "https://github.com/johndoe,",
+        "https://linkedin.com/in/johndoe"
+      ]
+    },
+    "normalized_value": {
+      "Recruiter CSV": [
+        "https://linkedin.com/in/johndoe"
+      ],
+      "ATS JSON": [
+        "https://linkedin.com/in/johndoe",
+        "https://github.com/johndoe"
+      ],
+      "Resume PDF": [
+        "https://github.com/johndoe,",
+        "https://linkedin.com/in/johndoe"
+      ]
+    },
+    "validation_result": "Success",
+    "merge_decision": "union_deduplicate",
+    "confidence": 1.0,
+    "final_value": "['https://linkedin.com/in/johndoe', 'https://github.com/johndoe', 'https://github.com/johndoe,']",
+    "explanation": "Union of URLs from sources: Recruiter CSV, ATS JSON, Resume PDF."
+  },
+  {
+    "pipeline_stage": "projection",
+    "source": "System",
+    "field": "output_file",
+    "raw_value": null,
+    "normalized_value": null,
+    "validation_result": "Success",
+    "merge_decision": null,
+    "confidence": null,
+    "final_value": null,
+    "explanation": "Projected and outputted profile to 'outputs\\candidate.json'."
+  }
+]

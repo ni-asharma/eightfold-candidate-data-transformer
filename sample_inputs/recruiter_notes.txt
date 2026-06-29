@@ -1,0 +1,12 @@
+Candidate: Johnathan Doe
+Email: john.doe@example.com
+Phone: +1 415-555-0100
+Location: San Francisco, USA
+Skills: Python, C++, Go, Docker
+
+Company: Eightfold AI
+Title: Senior Staff Engineer
+Dates: 2026-01 to Present
+Description: Leads ingestion data pipeline architectural designs.
+
+Note: Candidate shows strong system design skills and has background in search systems.

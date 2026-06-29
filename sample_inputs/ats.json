@@ -1,0 +1,40 @@
+{
+  "first_name": "Jonathan",
+  "last_name": "Doe",
+  "email": "john.doe@example.com",
+  "phone": "+14155550100",
+  "location": {
+    "city": "San Francisco",
+    "country": "United States"
+  },
+  "skills": ["Python", "c plus plus", "Docker", "SQL"],
+  "experience": [
+    {
+      "company": "Google Inc.",
+      "title": "Senior Software Engineer",
+      "start_date": "2024-01",
+      "end_date": "Present",
+      "description": "Tech lead for search indexing team."
+    },
+    {
+      "company": "Google",
+      "title": "Software Engineer",
+      "start_date": "2022-01",
+      "end_date": "2023-12",
+      "description": "Developed scalable search backend and optimized index latency."
+    }
+  ],
+  "education": [
+    {
+      "institution": "Stanford University",
+      "degree": "Bachelor of Science",
+      "field_of_study": "CS",
+      "start_date": "2018-09",
+      "end_date": "2022-06"
+    }
+  ],
+  "urls": [
+    "https://linkedin.com/in/johndoe",
+    "https://github.com/johndoe"
+  ]
+}

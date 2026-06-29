@@ -1,0 +1,10 @@
+{
+  "duplicates_removed": 3,
+  "conflicts_resolved": 1,
+  "missing_fields": 0,
+  "malformed_values": 0,
+  "normalization_fixes": 9,
+  "validation_failures": 0,
+  "completeness_percentage": 100.0,
+  "overall_data_quality_score": 100.0
+}

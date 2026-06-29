@@ -1,0 +1,398 @@
+{
+  "john.doe@example.com": {
+    "first_name": {
+      "value": "John",
+      "winning_source": "Recruiter CSV",
+      "competing_values": {
+        "Recruiter CSV": "John",
+        "ATS JSON": "Jonathan",
+        "Resume PDF": "John",
+        "Recruiter Notes TXT": "Johnathan"
+      },
+      "normalized_values": {
+        "Recruiter CSV": "John",
+        "ATS JSON": "Jonathan",
+        "Resume PDF": "John",
+        "Recruiter Notes TXT": "Johnathan"
+      },
+      "merge_strategy": "higher_source_reliability",
+      "confidence_score": 0.9975,
+      "reason": "Value from 'Recruiter CSV' selected due to higher source weight (0.95) compared to 'ATS JSON' (0.9). Value agreed upon by 2 source(s): Recruiter CSV, Resume PDF."
+    },
+    "last_name": {
+      "value": "Doe",
+      "winning_source": "Recruiter CSV",
+      "competing_values": {
+        "Recruiter CSV": "Doe",
+        "ATS JSON": "Doe",
+        "Resume PDF": "Doe",
+        "Recruiter Notes TXT": "Doe"
+      },
+      "normalized_values": {
+        "Recruiter CSV": "Doe",
+        "ATS JSON": "Doe",
+        "Resume PDF": "Doe",
+        "Recruiter Notes TXT": "Doe"
+      },
+      "merge_strategy": "exact_match",
+      "confidence_score": 1.0,
+      "reason": "All sources (Recruiter CSV, ATS JSON, Resume PDF, Recruiter Notes TXT) agree on exact raw value."
+    },
+    "email": {
+      "value": "john.doe@example.com",
+      "winning_source": "Recruiter CSV",
+      "competing_values": {
+        "Recruiter CSV": "john.doe@example.com",
+        "ATS JSON": "john.doe@example.com",
+        "Resume PDF": "john.doe@example.com",
+        "Recruiter Notes TXT": "john.doe@example.com"
+      },
+      "normalized_values": {
+        "Recruiter CSV": "john.doe@example.com",
+        "ATS JSON": "john.doe@example.com",
+        "Resume PDF": "john.doe@example.com",
+        "Recruiter Notes TXT": "john.doe@example.com"
+      },
+      "merge_strategy": "exact_match",
+      "confidence_score": 1.0,
+      "reason": "All sources (Recruiter CSV, ATS JSON, Resume PDF, Recruiter Notes TXT) agree on exact raw value."
+    },
+    "phone": {
+      "value": "+14155550100",
+      "winning_source": "Recruiter CSV",
+      "competing_values": {
+        "Recruiter CSV": "+14155550100",
+        "ATS JSON": "+14155550100",
+        "Resume PDF": "+14155550100",
+        "Recruiter Notes TXT": "+14155550100"
+      },
+      "normalized_values": {
+        "Recruiter CSV": "+14155550100",
+        "ATS JSON": "+14155550100",
+        "Resume PDF": "+14155550100",
+        "Recruiter Notes TXT": "+14155550100"
+      },
+      "merge_strategy": "exact_match",
+      "confidence_score": 1.0,
+      "reason": "All sources (Recruiter CSV, ATS JSON, Resume PDF, Recruiter Notes TXT) agree on exact raw value."
+    },
+    "location": {
+      "value": {
+        "city": "San Francisco",
+        "country": "US"
+      },
+      "winning_source": "Recruiter CSV",
+      "competing_values": {
+        "ATS JSON": "San Francisco, US",
+        "Resume PDF": "San Francisco, US",
+        "Recruiter Notes TXT": "San Francisco, US",
+        "Recruiter CSV": "San Francisco, US"
+      },
+      "normalized_values": {
+        "ATS JSON": "San Francisco, US",
+        "Resume PDF": "San Francisco, US",
+        "Recruiter Notes TXT": "San Francisco, US",
+        "Recruiter CSV": "San Francisco, US"
+      },
+      "merge_strategy": "exact_match",
+      "confidence_score": 1.0,
+      "reason": "City Winner: (All sources (Recruiter CSV, ATS JSON, Resume PDF, Recruiter Notes TXT) agree on exact raw value.). Country Winner: (All sources (Recruiter CSV, ATS JSON, Resume PDF, Recruiter Notes TXT) agree on exact raw value.)."
+    },
+    "skills": {
+      "value": [
+        "Python",
+        "C++",
+        "SQL",
+        "Docker",
+        "JavaScript",
+        "Kubernetes",
+        "Go"
+      ],
+      "winning_source": "Recruiter CSV",
+      "competing_values": {
+        "Recruiter CSV": [
+          "Python",
+          "C++",
+          "SQL"
+        ],
+        "ATS JSON": [
+          "Python",
+          "C++",
+          "Docker",
+          "SQL"
+        ],
+        "Resume PDF": [
+          "Python",
+          "C++",
+          "JavaScript",
+          "Docker",
+          "Kubernetes"
+        ],
+        "Recruiter Notes TXT": [
+          "Python",
+          "C++",
+          "Go",
+          "Docker"
+        ]
+      },
+      "normalized_values": {
+        "Recruiter CSV": [
+          "Python",
+          "C++",
+          "SQL"
+        ],
+        "ATS JSON": [
+          "Python",
+          "C++",
+          "Docker",
+          "SQL"
+        ],
+        "Resume PDF": [
+          "Python",
+          "C++",
+          "JavaScript",
+          "Docker",
+          "Kubernetes"
+        ],
+        "Recruiter Notes TXT": [
+          "Python",
+          "C++",
+          "Go",
+          "Docker"
+        ]
+      },
+      "merge_strategy": "union_deduplicate",
+      "confidence_score": 1.0,
+      "reason": "Union of skills from sources: Recruiter CSV, ATS JSON, Resume PDF, Recruiter Notes TXT."
+    },
+    "experience": {
+      "value": [
+        {
+          "company": "Google",
+          "title": "Senior Software Engineer",
+          "start_date": "2024-01",
+          "end_date": "Present",
+          "description": "Tech lead for search indexing team."
+        },
+        {
+          "company": "Eightfold AI",
+          "title": "Senior Staff Engineer",
+          "start_date": "2026-01",
+          "end_date": "Present",
+          "description": "Leads ingestion data pipeline architectural designs."
+        },
+        {
+          "company": "Google",
+          "title": "Software Engineer",
+          "start_date": "2022-01",
+          "end_date": "2023-12",
+          "description": "Worked on distributed backend storage systems and improved database access latency."
+        }
+      ],
+      "winning_source": "Recruiter CSV",
+      "competing_values": {
+        "Recruiter CSV": [
+          {
+            "company": "Google",
+            "title": "Software Engineer",
+            "start_date": "2022-01",
+            "end_date": "2023-12",
+            "description": "Developed scalable search microservices."
+          }
+        ],
+        "ATS JSON": [
+          {
+            "company": "Google",
+            "title": "Senior Software Engineer",
+            "start_date": "2024-01",
+            "end_date": "Present",
+            "description": "Tech lead for search indexing team."
+          },
+          {
+            "company": "Google",
+            "title": "Software Engineer",
+            "start_date": "2022-01",
+            "end_date": "2023-12",
+            "description": "Developed scalable search backend and optimized index latency."
+          }
+        ],
+        "Resume PDF": [
+          {
+            "company": "Google",
+            "title": "Software Engineer",
+            "start_date": "2022-01",
+            "end_date": "2023-12",
+            "description": "Worked on distributed backend storage systems and improved database access latency."
+          }
+        ],
+        "Recruiter Notes TXT": [
+          {
+            "company": "Eightfold AI",
+            "title": "Senior Staff Engineer",
+            "start_date": "2026-01",
+            "end_date": "Present",
+            "description": "Leads ingestion data pipeline architectural designs."
+          }
+        ]
+      },
+      "normalized_values": {
+        "Recruiter CSV": [
+          {
+            "company": "Google",
+            "title": "Software Engineer",
+            "start_date": "2022-01",
+            "end_date": "2023-12",
+            "description": "Developed scalable search microservices."
+          }
+        ],
+        "ATS JSON": [
+          {
+            "company": "Google",
+            "title": "Senior Software Engineer",
+            "start_date": "2024-01",
+            "end_date": "Present",
+            "description": "Tech lead for search indexing team."
+          },
+          {
+            "company": "Google",
+            "title": "Software Engineer",
+            "start_date": "2022-01",
+            "end_date": "2023-12",
+            "description": "Developed scalable search backend and optimized index latency."
+          }
+        ],
+        "Resume PDF": [
+          {
+            "company": "Google",
+            "title": "Software Engineer",
+            "start_date": "2022-01",
+            "end_date": "2023-12",
+            "description": "Worked on distributed backend storage systems and improved database access latency."
+          }
+        ],
+        "Recruiter Notes TXT": [
+          {
+            "company": "Eightfold AI",
+            "title": "Senior Staff Engineer",
+            "start_date": "2026-01",
+            "end_date": "Present",
+            "description": "Leads ingestion data pipeline architectural designs."
+          }
+        ]
+      },
+      "merge_strategy": "company_match_merge",
+      "confidence_score": 0.95,
+      "reason": "Grouped and merged experience records based on identical company, title, and dates."
+    },
+    "education": {
+      "value": [
+        {
+          "institution": "Stanford University",
+          "degree": "BS",
+          "field_of_study": "Computer Science",
+          "start_date": "2018-09",
+          "end_date": "2022-06"
+        }
+      ],
+      "winning_source": "Recruiter CSV",
+      "competing_values": {
+        "Recruiter CSV": [
+          {
+            "institution": "Stanford University",
+            "degree": "BS",
+            "field_of_study": "Computer Science",
+            "start_date": "2018-09",
+            "end_date": "2022-06"
+          }
+        ],
+        "ATS JSON": [
+          {
+            "institution": "Stanford University",
+            "degree": "Bachelor of Science",
+            "field_of_study": "CS",
+            "start_date": "2018-09",
+            "end_date": "2022-06"
+          }
+        ],
+        "Resume PDF": [
+          {
+            "institution": "Stanford University",
+            "degree": "Bachelor of Science",
+            "field_of_study": "Computer Science",
+            "start_date": "2018-09",
+            "end_date": "2022-06"
+          }
+        ]
+      },
+      "normalized_values": {
+        "Recruiter CSV": [
+          {
+            "institution": "Stanford University",
+            "degree": "BS",
+            "field_of_study": "Computer Science",
+            "start_date": "2018-09",
+            "end_date": "2022-06"
+          }
+        ],
+        "ATS JSON": [
+          {
+            "institution": "Stanford University",
+            "degree": "Bachelor of Science",
+            "field_of_study": "CS",
+            "start_date": "2018-09",
+            "end_date": "2022-06"
+          }
+        ],
+        "Resume PDF": [
+          {
+            "institution": "Stanford University",
+            "degree": "Bachelor of Science",
+            "field_of_study": "Computer Science",
+            "start_date": "2018-09",
+            "end_date": "2022-06"
+          }
+        ]
+      },
+      "merge_strategy": "institution_match_merge",
+      "confidence_score": 0.95,
+      "reason": "Grouped and merged education records based on institution names."
+    },
+    "urls": {
+      "value": [
+        "https://linkedin.com/in/johndoe",
+        "https://github.com/johndoe",
+        "https://github.com/johndoe,"
+      ],
+      "winning_source": "Recruiter CSV",
+      "competing_values": {
+        "Recruiter CSV": [
+          "https://linkedin.com/in/johndoe"
+        ],
+        "ATS JSON": [
+          "https://linkedin.com/in/johndoe",
+          "https://github.com/johndoe"
+        ],
+        "Resume PDF": [
+          "https://github.com/johndoe,",
+          "https://linkedin.com/in/johndoe"
+        ]
+      },
+      "normalized_values": {
+        "Recruiter CSV": [
+          "https://linkedin.com/in/johndoe"
+        ],
+        "ATS JSON": [
+          "https://linkedin.com/in/johndoe",
+          "https://github.com/johndoe"
+        ],
+        "Resume PDF": [
+          "https://github.com/johndoe,",
+          "https://linkedin.com/in/johndoe"
+        ]
+      },
+      "merge_strategy": "union_deduplicate",
+      "confidence_score": 1.0,
+      "reason": "Union of URLs from sources: Recruiter CSV, ATS JSON, Resume PDF."
+    }
+  }
+}
