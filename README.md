@@ -1,8 +1,18 @@
 # Multi-Source Candidate Data Transformer
 
-A production-grade, extensible data ingestion and transformation pipeline designed to unify messy candidate records from multiple heterogeneous sources (Recruiter CSV, ATS JSON, Resume PDF, and Recruiter Notes TXT) into a single, trustworthy canonical profile. Built with Pydantic validation, Typer CLI, and Rich logging.
+Production-grade candidate data ingestion pipeline built for the Eightfold Engineering Intern Assignment.
 
----
+## Features
+
+- Multi-source ingestion
+- Entity resolution
+- Conflict resolution
+- Confidence scoring
+- Provenance tracking
+- Configurable projection layer
+- CLI interface
+- 17 passing tests
+
 
 ## 1. System Architecture
 
